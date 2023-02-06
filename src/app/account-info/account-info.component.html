@@ -1,0 +1,15 @@
+<ng-container *ngIf="$accountInfo | async; let accountInfo; else: loading">
+  <h1>Account Information</h1>
+  <h3>Username: {{ accountInfo.username }}</h3>
+  <h3>Role: {{ accountInfo.role }}</h3>
+  <h3>Notifications: {{ accountInfo.notificationCount }}</h3>
+  <h3>Language: {{ accountInfo.language }}</h3>
+
+  <button (click)="refresh()">Refresh User</button>
+  <button (click)="update()">Update User</button>
+  <button (click)="incrementNotifications()">Incement Notifications</button>
+  <button (click)="clearNotifications()">Clear Notifications</button>
+</ng-container>
+<ng-template #loading>
+  <h2>Loading User...</h2>
+</ng-template>
