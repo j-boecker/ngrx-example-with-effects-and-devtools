@@ -1,15 +1,32 @@
-<ng-container *ngIf="$accountInfo | async; let accountInfo; else: loading">
-  <h1>Account Information</h1>
-  <h3>Username: {{ accountInfo.username }}</h3>
-  <h3>Role: {{ accountInfo.role }}</h3>
-  <h3>Notifications: {{ accountInfo.notificationCount }}</h3>
-  <h3>Language: {{ accountInfo.language }}</h3>
+<div class="user-info-container">
+  <ng-container *ngIf="$accountInfo | async; let accountInfo; else: loading">
+    <h3>Username: {{ accountInfo.username }}</h3>
+    <h3>Role: {{ accountInfo.role }}</h3>
+    <h3>Notifications: {{ accountInfo.notificationCount }}</h3>
+    <h3>Language: {{ accountInfo.language }}</h3>
 
-  <button (click)="refresh()">Refresh User</button>
-  <button (click)="update()">Update User</button>
-  <button (click)="incrementNotifications()">Incement Notifications</button>
-  <button (click)="clearNotifications()">Clear Notifications</button>
-</ng-container>
-<ng-template #loading>
-  <h2>Loading User...</h2>
-</ng-template>
+    <fng-button class="fwe-pr-2 fwe-mb-2" (click)="refresh()"
+      >Refresh User</fng-button
+    >
+    <fng-button class="fwe-pr-2" (click)="update()">Update User</fng-button>
+    <fng-button class="fwe-pr-2" (click)="clearNotifications()"
+      >Clear Notifications</fng-button
+    >
+    <fng-button
+      [primary]="true"
+      class="fwe-pr-2"
+      (click)="incrementNotifications()"
+      >Incement Notifications</fng-button
+    >
+  </ng-container>
+  <ng-template #loading>
+    <div
+      class="
+        loading
+        fwe-d-flex fwe-align-items-center fwe-justify-content-center
+      "
+    >
+      <fng-loading-indicator></fng-loading-indicator>
+    </div>
+  </ng-template>
+</div>
