@@ -9,10 +9,12 @@ import {
 import { EffectsModule } from '@ngrx/effects';
 import { AccountInfoEffects } from './store/account-info.effects';
 import { AccountService } from './account.service';
+import { FestoAngularModule } from '@festo-ui/angular';
 
 @NgModule({
   imports: [
     CommonModule,
+    FestoAngularModule,
     StoreModule.forFeature(accountInfoFeatureKey, accountInfoReducer),
     // EffectsModule.forFeature([AccountInfoEffects]),
   ],

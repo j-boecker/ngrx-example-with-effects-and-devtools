@@ -1,10 +1,16 @@
-p {
-  font-family: Lato;
+@import url('https://unpkg.com/@festo-ui/web-essentials@dev/dist/css/festo-web-essentials.min.css');
+
+.fwae-submenu {
+  margin-left: 12px;
+  overflow: hidden;
 }
 
-h1 { font-family: Lato; }
+.fwae-submenu .fwe-list-group {
+  justify-content: space-between;
+  min-width: 696px;
+  height: 60px;
+}
 
-/*
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://github.com/ngrx/platform
-*/
+.fwae-submenu > nav > a.fwe-list-group-item.fwe-active {
+  color: var(--fwe-hero);
+}

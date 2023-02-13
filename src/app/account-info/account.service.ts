@@ -25,7 +25,7 @@ export class AccountService {
   constructor() {}
 
   getCurrentUser(): Observable<AccountInfo> {
-    return of(this.mockAccountInfo).pipe(delay(500));
+    return of(this.mockAccountInfo).pipe(delay(1000));
   }
 
   updateCurrentUser(request: AccountUpdateRequest): Observable<AccountInfo> {

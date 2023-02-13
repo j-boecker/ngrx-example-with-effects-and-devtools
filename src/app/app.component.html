@@ -1,1 +1,64 @@
-<app-account-info> </app-account-info>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extended Example for NGRX - Festo UI</title>
+  </head>
+  <header class="fwe-fixed-header">
+    <nav class="fwe-navbar fwe-pl-0">
+      <div class="fwe-container">
+        <!-- mobile navigation -->
+        <button
+          title="Mobile Navigation"
+          type="button"
+          class="fwe-navbar-burger-menu fwe-d-block fwe-d-md-none"
+          id="navbarbtn"
+        ></button>
+        <div class="fwe-mobile-navlist-container" id="navlistcontainer">
+          <nav class="fwe-mobile-navlist">
+            <a href="#" class="fwe-active">Home</a>
+            <a href="#">Account Settings</a>
+            <a href="#">Other</a>
+          </nav>
+        </div>
+
+        <!-- navigation -->
+        <nav class="fwe-navlist fwe-d-none fwe-d-md-flex">
+          <a href="#" class="fwe-active">Home</a>
+          <a href="#">Account Settings</a>
+          <a href="#">Other</a>
+        </nav>
+
+        <!-- festo logo -->
+        <div class="fwe-logo-container">
+          <div class="fwe-festo-logo"></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- spaced needed when using 'fixed-header' -->
+  <div class="fwe-navbar-spacer"></div>
+
+  <!-- main content goes here -->
+  <div
+    class="fwe-grid fwe-container fwe-bg-background fwe-grid fwe-my-4 fwe-pb-4"
+  >
+    <div class="fwe-col-12 fwe-col-md-6">
+      <div class="fwe-card fwe-mx-4">
+        <div class="fwe-card-header">
+          <div class="fwe-card-title">
+            <h5>Account Info</h5>
+            <p>Account Info ngrx test</p>
+          </div>
+          <button class="fwe-btn fwe-btn-link fwe-dark fwe-ml-auto">
+            <i class="fwe-icon fwe-icon-menu-more fwe-icon-lg"></i>
+          </button>
+        </div>
+        <div class="fwe-card-body">
+          <app-account-info></app-account-info>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
