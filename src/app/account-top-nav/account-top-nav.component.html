@@ -1,0 +1,12 @@
+<div class="fwe-button-container fwe-d-none fwe-d-xxs-grid">
+  <button class="fwe-btn fwe-btn-link fwe-dark">
+    <i class="fwe-icon fwe-icon-people-user fwe-color-hero"></i>
+    {{ username$ | async }}
+  </button>
+  <button class="fwe-btn fwe-btn-link fwe-dark">
+    <i class="fwe-icon fwe-icon-communication-notification"></i>
+  </button>
+  <span *ngIf="notificationCount$ | async; let count" class="fwe-badge">{{
+    count
+  }}</span>
+</div>
